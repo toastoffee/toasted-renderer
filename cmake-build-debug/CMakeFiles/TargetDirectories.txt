@@ -1,0 +1,3 @@
+/Users/toastoffee/Documents/CLionProjects/toasted-renderer/cmake-build-debug/CMakeFiles/toasted_renderer.dir
+/Users/toastoffee/Documents/CLionProjects/toasted-renderer/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/toastoffee/Documents/CLionProjects/toasted-renderer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
