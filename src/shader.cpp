@@ -13,9 +13,7 @@
 #include <fstream>
 #include <sstream>
 
-#include "shader.h"
-
-
+#include <shader.h>
 
 // 构造器存储着色器路径
 Shader::Shader(std::filesystem::path vertexPath, std::filesystem::path fragmentPath) {
@@ -25,6 +23,7 @@ Shader::Shader(std::filesystem::path vertexPath, std::filesystem::path fragmentP
 
     LoadShader();
 }
+
 
 // 析构函数
 Shader::~Shader() {
@@ -157,4 +156,3 @@ void Shader::setVec4(const std::string &name, const glm::vec4 &val) const {
 void Shader::setMat4(const std::string &name, const glm::mat4 &mat) const {
     glUniformMatrix4fv(glGetUniformLocation(_programID, name.c_str()), 1, GL_FALSE, &mat[0][0]);
 }
-

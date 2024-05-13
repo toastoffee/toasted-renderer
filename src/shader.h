@@ -14,7 +14,7 @@
 #include "glad/glad.h"
 #include "glm.hpp"
 #include <string>
-
+#include <filesystem>
 
 
 class Shader {
@@ -27,6 +27,8 @@ private:
     std::filesystem::path _fragmentPath;        // 片元着色器文件路径
 
 public:
+
+//    auto ProgramID() const -> unsigned int {return _programID;}
 
     // 构造器读取并构建着色器
     Shader(std::filesystem::path vertexPath, std::filesystem::path fragmentPath);

@@ -13,7 +13,7 @@ include_directories(glm)
 include_directories(glad/include)
 
 # 包含glfw头文件
-include_directories(/opt/homebrew/Cellar/glfw/3.4/lib)
+include_directories(/opt/homebrew/Cellar/glfw/3.4/include)
 # 链接glfw库
 link_directories(/opt/homebrew/Cellar/glfw/3.4/lib)
 
@@ -22,6 +22,8 @@ add_executable( ${PROJECT_NAME}
         glad/src/glad.c
         src/shader.cpp
         src/shader.h
+        src/path_helper.cpp
+        src/path_helper.h
 )
 
 target_link_libraries(
