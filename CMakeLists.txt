@@ -21,9 +21,12 @@ add_executable( ${PROJECT_NAME}
         main.cpp
         glad/src/glad.c
         src/shader.cpp
-        src/shader.h
         src/path_helper.cpp
-        src/path_helper.h
+        src/camera.cpp
+        src/camera.h
+        src/utils/singleton.h
+        src/Input.cpp
+        src/render_window.cpp
 )
 
 target_link_libraries(

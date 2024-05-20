@@ -22,6 +22,7 @@ private:
 public:
     std::filesystem::path static constructFilePath(const std::filesystem::path& path){
         std::filesystem::path ret = std::filesystem::current_path().parent_path();
+
         ret += '/';
         ret += path;
         return ret;

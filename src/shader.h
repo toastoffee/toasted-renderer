@@ -11,7 +11,7 @@
 #ifndef TOASTED_RENDERER_SHADER_H
 #define TOASTED_RENDERER_SHADER_H
 
-#include "glad/glad.h"
+#include <glad/glad.h>
 #include "glm.hpp"
 #include <string>
 #include <filesystem>

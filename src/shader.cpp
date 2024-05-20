@@ -8,12 +8,13 @@
   ******************************************************************************
   */
 
+#include <shader.h>
+
 #include <iostream>
 #include <string>
 #include <fstream>
 #include <sstream>
 
-#include <shader.h>
 
 // 构造器存储着色器路径
 Shader::Shader(std::filesystem::path vertexPath, std::filesystem::path fragmentPath) {

@@ -4,10 +4,12 @@
 #include <GLFW/glfw3.h>
 
 #include <glm.hpp>
-#include "glm/gtc/matrix_transform.hpp"
+#include <gtc/matrix_transform.hpp>
 
 #include <shader.h>
 #include <path_helper.h>
+#include <render_window.h>
+#include <camera.h>
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -18,33 +20,37 @@ const unsigned int SCR_HEIGHT = 600;
 
 int main() {
 
-    // glfw 初始化和设置
-    glfwInit();
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+//    // glfw 初始化和设置
+//    glfwInit();
+//    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+//    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+//    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+//
+//    #ifdef __APPLE__
+//    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+//    #endif
+//
+//    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "toasted_renderer", nullptr, nullptr);
+//    if(window == nullptr){
+//        std::cout << "ERROR::GLFW::WINDOW_CREATE_FAILED" << std::endl;
+//        glfwTerminate();
+//        return -1;
+//    }
+//    glfwMakeContextCurrent(window);
+//
+//    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+//    {
+//        std::cout << "ERROR::GLAD::INITIALIZATION_FAILED" << std::endl;
+//        return -1;
+//    }
 
-    #ifdef __APPLE__
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-    #endif
+    Camera mainCamera = Camera();
 
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "toasted_renderer", nullptr, nullptr);
-    if(window == nullptr){
-        std::cout << "ERROR::GLFW::WINDOW_CREATE_FAILED" << std::endl;
-        glfwTerminate();
-        return -1;
-    }
-    glfwMakeContextCurrent(window);
-//    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    RenderWindow mainWindow = RenderWindow(&mainCamera, "toasted-renderer", SCR_WIDTH, SCR_HEIGHT);
+    GLFWwindow *window = mainWindow.GetWindow();
 
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    {
-        std::cout << "ERROR::GLAD::INITIALIZATION_FAILED" << std::endl;
-        return -1;
-    }
+    mainWindow.EnableDepthTest();
 
-    // 开启深度测试
-    glEnable(GL_DEPTH_TEST);
 
     float vertices[] = {
             -0.5f, -0.5f, -0.5f,
