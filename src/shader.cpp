@@ -19,8 +19,8 @@
 // 构造器存储着色器路径
 Shader::Shader(std::filesystem::path vertexPath, std::filesystem::path fragmentPath) {
 
-    _vertexPath = std::move(vertexPath);
-    _fragmentPath = std::move(fragmentPath);
+    _vertexPath    = std::move(vertexPath);
+    _fragmentPath  = std::move(fragmentPath);
 
     LoadShader();
 }
@@ -35,10 +35,10 @@ Shader::~Shader() {
 void Shader::LoadShader() {
 
     // 1. 从文件路径中获取顶点/片元着色器文件
-    std::string vertexCode;
-    std::string fragmentCode;
-    std::ifstream vertexShaderFile;
-    std::ifstream fragmentShaderFile;
+    std::string     vertexCode;
+    std::string     fragmentCode;
+    std::ifstream   vertexShaderFile;
+    std::ifstream   fragmentShaderFile;
 
     // 确保ifstream可以抛出异常
     vertexShaderFile.exceptions(std::ifstream ::failbit | std::ifstream ::badbit);
@@ -51,8 +51,8 @@ void Shader::LoadShader() {
 
         // 将文件内容读进流中
         std::stringstream vertexShaderStream, fragmentShaderStream;
-        vertexShaderStream << vertexShaderFile.rdbuf();
-        fragmentShaderStream << fragmentShaderFile.rdbuf();
+        vertexShaderStream    << vertexShaderFile.rdbuf();
+        fragmentShaderStream  << fragmentShaderFile.rdbuf();
 
         // 关闭文件
         vertexShaderFile.close();
@@ -114,46 +114,47 @@ void Shader::LoadShader() {
 }
 
 // 使用/激活程序
-void Shader::use() const{
+void Shader::Use() const{
     glUseProgram(_programID);
 }
 
-void Shader::setBool(const std::string &name, const bool value) const {
+void Shader::SetBool(const std::string &name, bool value) const {
     glUniform1i(glGetUniformLocation(_programID, name.c_str()), (int)value);
 }
 
-void Shader::setInt(const std::string &name, const int value) const {
+void Shader::SetInt(const std::string &name, int value) const {
     glUniform1i(glGetUniformLocation(_programID, name.c_str()), value);
 }
 
-void Shader::setFloat(const std::string &name, const float value) const{
+void Shader::SetFloat(const std::string &name, float value) const{
     glUniform1f(glGetUniformLocation(_programID, name.c_str()), value);
 }
 
-void Shader::setVec2(const std::string &name, float x, float y) const {
+void Shader::SetVec2(const std::string &name, float x, float y) const {
     glUniform2f(glGetUniformLocation(_programID, name.c_str()), x, y);
 }
 
-void Shader::setVec2(const std::string &name, const glm::vec2 &val) const {
+void Shader::SetVec2(const std::string &name, const glm::vec2 &val) const {
     glUniform2fv(glGetUniformLocation(_programID, name.c_str()), 1, &val[0]);
 }
 
-void Shader::setVec3(const std::string &name, float x, float y, float z) const {
+void Shader::SetVec3(const std::string &name, float x, float y, float z) const {
     glUniform3f(glGetUniformLocation(_programID, name.c_str()), x, y, z);
 }
 
-void Shader::setVec3(const std::string &name, const glm::vec3 &val) const {
+void Shader::SetVec3(const std::string &name, const glm::vec3 &val) const {
     glUniform3fv(glGetUniformLocation(_programID, name.c_str()), 1, &val[0]);
 }
 
-void Shader::setVec4(const std::string &name, float x, float y, float z, float w) const {
+void Shader::SetVec4(const std::string &name, float x, float y, float z, float w) const {
     glUniform4f(glGetUniformLocation(_programID, name.c_str()), x, y, z, w);
 }
 
-void Shader::setVec4(const std::string &name, const glm::vec4 &val) const {
+void Shader::SetVec4(const std::string &name, const glm::vec4 &val) const {
     glUniform4fv(glGetUniformLocation(_programID, name.c_str()), 1, &val[0]);
 }
 
-void Shader::setMat4(const std::string &name, const glm::mat4 &mat) const {
+void Shader::SetMat4(const std::string &name, const glm::mat4 &mat) const {
     glUniformMatrix4fv(glGetUniformLocation(_programID, name.c_str()), 1, GL_FALSE, &mat[0][0]);
 }
+

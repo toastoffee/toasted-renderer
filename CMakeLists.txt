@@ -32,6 +32,8 @@ add_executable( ${PROJECT_NAME}
         src/Input.cpp
         src/render_window.cpp
         src/components/mesh.hpp
+        src/components/material.hpp
+        src/components/mesh_renderer.hpp
 )
 
 target_link_libraries(

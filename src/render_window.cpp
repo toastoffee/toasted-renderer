@@ -17,8 +17,8 @@
 RenderWindow::RenderWindow(Camera *camera, std::string name, unsigned int width, unsigned int height) {
 
     _camera = camera;
-    _name = std::move(name);
-    _width = width;
+    _name   = std::move(name);
+    _width  = width;
     _height = height;
 
     _window = InitWindow();

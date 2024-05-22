@@ -3,7 +3,7 @@
 3	973	1716296130699692576	CMakeFiles/toasted_renderer.dir/src/path_helper.cpp.o	8b3bc8293e731743
 1061	1140	1716296131202719683	toasted_renderer	4e5052cf30f49a07
 3	637	1716296130392482842	CMakeFiles/toasted_renderer.dir/src/camera.cpp.o	93b9bf5881e49245
-0	262	1716360723905947993	build.ninja	d54142be6cb0041
+0	262	1716381197953150876	build.ninja	d54142be6cb0041
 3	974	1716296130704281539	CMakeFiles/toasted_renderer.dir/src/shader.cpp.o	4eb1bd040ce59f1f
 2	975	1716296130706844486	CMakeFiles/toasted_renderer.dir/main.cpp.o	62c55871909161bc
 4	635	1716296130289480428	CMakeFiles/toasted_renderer.dir/src/Input.cpp.o	357792e3b1ecffb3

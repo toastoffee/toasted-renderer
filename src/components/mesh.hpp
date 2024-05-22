@@ -91,6 +91,16 @@ public:
         setUpMesh();
     }
 
+    // 绘制网格
+    void DrawMesh(){
+
+        glBindVertexArray(VAO);
+        glDrawElements(GL_TRIANGLES, static_cast<unsigned int>(_indices.size()), GL_UNSIGNED_INT, 0);
+
+        glBindVertexArray(0);
+
+    }
+
 };
 
 

@@ -45,7 +45,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 37,
+				"line" : 39,
 				"parent" : 0
 			},
 			{
@@ -236,7 +236,9 @@
 			[
 				5,
 				6,
-				9
+				9,
+				10,
+				11
 			]
 		}
 	],
@@ -297,6 +299,16 @@
 		{
 			"backtrace" : 1,
 			"path" : "src/components/mesh.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/components/material.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/components/mesh_renderer.hpp",
 			"sourceGroupIndex" : 1
 		}
 	],

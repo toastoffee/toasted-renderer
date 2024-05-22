@@ -76,7 +76,7 @@ int main() {
 
     Shader myShader(PathHelper::constructFilePath("shaders/vertex.glsl"),
                     PathHelper::constructFilePath("shaders/fragment.glsl"));
-    myShader.use();
+    myShader.Use();
 
     glm::mat4 view          = glm::mat4(1.0f);
     glm::mat4 projection    = glm::mat4(1.0f);
@@ -84,8 +84,8 @@ int main() {
     view                    = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
     projection              = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT,0.1f, 100.0f);
 
-    myShader.setMat4("view", view);
-    myShader.setMat4("projection", projection);
+    myShader.SetMat4("view", view);
+    myShader.SetMat4("projection", projection);
 
     // render loop
     // -----------
@@ -96,7 +96,7 @@ int main() {
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        myShader.use();
+        myShader.Use();
 
         glBindVertexArray(VAO);
 
@@ -106,7 +106,7 @@ int main() {
         float angle = 100.0f;
         model = glm::rotate(model, (float)glfwGetTime() * glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
 
-        myShader.setMat4("model",model);
+        myShader.SetMat4("model", model);
 
         glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
 
