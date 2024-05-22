@@ -45,7 +45,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 36,
+				"line" : 37,
 				"parent" : 0
 			},
 			{
@@ -235,7 +235,8 @@
 			"sourceIndexes" : 
 			[
 				5,
-				6
+				6,
+				9
 			]
 		}
 	],
@@ -292,6 +293,11 @@
 			"compileGroupIndex" : 0,
 			"path" : "src/render_window.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/components/mesh.hpp",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

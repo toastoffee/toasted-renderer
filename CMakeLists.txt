@@ -31,6 +31,7 @@ add_executable( ${PROJECT_NAME}
         src/utils/singleton.h
         src/Input.cpp
         src/render_window.cpp
+        src/components/mesh.hpp
 )
 
 target_link_libraries(

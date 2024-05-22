@@ -1,19 +1,10 @@
 # ninja log v5
-3	537	1715580838029073371	CMakeFiles/toasted_renderer.dir/glad/src/glad.c.o	44e93676bbe1931c
-3	479	1715677131426731834	CMakeFiles/toasted_renderer.dir/src/path_helper.cpp.o	797fa01eb86a86d1
-579	627	1716219191080988493	toasted_renderer	a1f84f2e04b9a211
-3	323	1715687417098186526	CMakeFiles/toasted_renderer.dir/src/camera.cpp.o	901604e574bc7920
-4	86	1716296129988487995	build.ninja	d54142be6cb0041
-3	1518	1716218681150223998	CMakeFiles/toasted_renderer.dir/src/shader.cpp.o	57a681f420fc93fb
-3	579	1716219191029104381	CMakeFiles/toasted_renderer.dir/main.cpp.o	cde09fd1d07af232
-3	194	1715677131142222198	CMakeFiles/toasted_renderer.dir/src/Input.cpp.o	91e7eafb9a7d7a6b
-3	537	1716219190986715092	CMakeFiles/toasted_renderer.dir/src/render_window.cpp.o	c478abc7ed965bff
-0	262	1716296129988487995	build.ninja	d54142be6cb0041
-4	635	1716296130289480428	CMakeFiles/toasted_renderer.dir/src/Input.cpp.o	357792e3b1ecffb3
 3	637	1716296130313883577	CMakeFiles/toasted_renderer.dir/glad/src/glad.c.o	5baa67b94bd85078
-3	637	1716296130392482842	CMakeFiles/toasted_renderer.dir/src/camera.cpp.o	93b9bf5881e49245
 3	973	1716296130699692576	CMakeFiles/toasted_renderer.dir/src/path_helper.cpp.o	8b3bc8293e731743
+1061	1140	1716296131202719683	toasted_renderer	4e5052cf30f49a07
+3	637	1716296130392482842	CMakeFiles/toasted_renderer.dir/src/camera.cpp.o	93b9bf5881e49245
+0	262	1716360723905947993	build.ninja	d54142be6cb0041
 3	974	1716296130704281539	CMakeFiles/toasted_renderer.dir/src/shader.cpp.o	4eb1bd040ce59f1f
 2	975	1716296130706844486	CMakeFiles/toasted_renderer.dir/main.cpp.o	62c55871909161bc
+4	635	1716296130289480428	CMakeFiles/toasted_renderer.dir/src/Input.cpp.o	357792e3b1ecffb3
 636	1061	1716296131038102026	CMakeFiles/toasted_renderer.dir/src/render_window.cpp.o	8c3612481373a84a
-1061	1140	1716296131202719683	toasted_renderer	4e5052cf30f49a07
