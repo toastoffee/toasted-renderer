@@ -17,6 +17,10 @@ include_directories(/opt/homebrew/Cellar/glfw/3.4/include)
 # 链接glfw库
 link_directories(/opt/homebrew/Cellar/glfw/3.4/lib)
 
+# 链接assimp库
+include_directories(/opt/homebrew/Cellar/assimp/5.3.1/include)
+link_directories(/opt/homebrew/Cellar/assimp/5.3.1/lib)
+
 add_executable( ${PROJECT_NAME}
         main.cpp
         glad/src/glad.c
@@ -32,4 +36,5 @@ add_executable( ${PROJECT_NAME}
 target_link_libraries(
         ${PROJECT_NAME}
         glfw
+        assimp
 )

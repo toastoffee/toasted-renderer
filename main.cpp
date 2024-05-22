@@ -20,29 +20,6 @@ const unsigned int SCR_HEIGHT = 600;
 
 int main() {
 
-//    // glfw 初始化和设置
-//    glfwInit();
-//    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-//    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-//    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-//
-//    #ifdef __APPLE__
-//    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-//    #endif
-//
-//    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "toasted_renderer", nullptr, nullptr);
-//    if(window == nullptr){
-//        std::cout << "ERROR::GLFW::WINDOW_CREATE_FAILED" << std::endl;
-//        glfwTerminate();
-//        return -1;
-//    }
-//    glfwMakeContextCurrent(window);
-//
-//    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-//    {
-//        std::cout << "ERROR::GLAD::INITIALIZATION_FAILED" << std::endl;
-//        return -1;
-//    }
 
     Camera mainCamera = Camera();
 

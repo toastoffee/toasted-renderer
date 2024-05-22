@@ -27,7 +27,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 20,
+				"line" : 24,
 				"parent" : 0
 			},
 			{
@@ -37,9 +37,15 @@
 				"parent" : 0
 			},
 			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 22,
+				"parent" : 0
+			},
+			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 32,
+				"line" : 36,
 				"parent" : 0
 			},
 			{
@@ -65,6 +71,12 @@
 				"file" : 0,
 				"line" : 16,
 				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 21,
+				"parent" : 0
 			}
 		]
 	},
@@ -80,20 +92,24 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"path" : "/Users/toastoffee/Documents/CLionProjects/toasted-renderer/src"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"path" : "/Users/toastoffee/Documents/CLionProjects/toasted-renderer/glm"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 7,
 					"path" : "/Users/toastoffee/Documents/CLionProjects/toasted-renderer/glad/include"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 8,
 					"path" : "/opt/homebrew/Cellar/glfw/3.4/include"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/opt/homebrew/Cellar/assimp/5.3.1/include"
 				}
 			],
 			"language" : "CXX",
@@ -125,20 +141,24 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"path" : "/Users/toastoffee/Documents/CLionProjects/toasted-renderer/src"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"path" : "/Users/toastoffee/Documents/CLionProjects/toasted-renderer/glm"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 7,
 					"path" : "/Users/toastoffee/Documents/CLionProjects/toasted-renderer/glad/include"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 8,
 					"path" : "/opt/homebrew/Cellar/glfw/3.4/include"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/opt/homebrew/Cellar/assimp/5.3.1/include"
 				}
 			],
 			"language" : "C",
@@ -167,12 +187,22 @@
 				"role" : "libraryPath"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/opt/homebrew/Cellar/glfw/3.4/lib",
+				"backtrace" : 3,
+				"fragment" : "-L/opt/homebrew/Cellar/assimp/5.3.1/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/opt/homebrew/Cellar/glfw/3.4/lib -Wl,-rpath,/opt/homebrew/Cellar/assimp/5.3.1/lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 3,
+				"backtrace" : 4,
 				"fragment" : "-lglfw",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lassimp",
 				"role" : "libraries"
 			}
 		],

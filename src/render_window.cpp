@@ -63,3 +63,23 @@ GLFWwindow *RenderWindow::InitWindow() {
 
     return window;
 }
+
+void RenderWindow::RenderLoop() {
+
+
+    while(!glfwWindowShouldClose(_window))
+    {
+        // 设置清除颜色
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+
+        // 清除颜色缓冲和深度缓冲
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        glfwSwapBuffers(_window);
+
+        glfwPollEvents();
+    }
+
+    TerminateWindow();
+    
+}

@@ -45,6 +45,9 @@ public:
     // 设置渲染窗口尺寸
     void SetWindowSize(unsigned int width, unsigned int height);
 
+    // 开始渲染循环
+    void RenderLoop();
+
     // 打开深度测试
     void EnableDepthTest(){
         glEnable(GL_DEPTH_TEST);
