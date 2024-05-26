@@ -32,8 +32,9 @@ public:
 struct Texture
 {
 public:
-    unsigned int Id;            // 纹理的id
-    std::string Type;           // 纹理的类型
+    unsigned int id;            // 纹理的id
+    std::string type;           // 纹理的类型
+    std::string path;           // 纹理的加载路径
 };
 
 class Mesh
@@ -98,6 +99,44 @@ public:
         glDrawElements(GL_TRIANGLES, static_cast<unsigned int>(_indices.size()), GL_UNSIGNED_INT, 0);
 
         glBindVertexArray(0);
+    }
+
+    //  通过贴图来渲染网格
+    void DrawWithTexture(const Shader &shader){
+
+        // 绑定正确的贴图
+        unsigned int diffuseNr  = 1;
+        unsigned int specularNr = 1;
+
+        for (unsigned int i = 0; i < _textures.size(); ++i) {
+
+            // 在绑定前激活正确的贴图单元
+            glActiveTexture(GL_TEXTURE0 + i);
+
+            std::string number;
+            std::string name = _textures[i].type;
+
+            if(name == "texture_diffuse"){
+                number = std::to_string(diffuseNr++);
+            }else if(name == "texture_specular"){
+                number = std::to_string(specularNr++);
+            }
+
+            // 将采样器设置到正确的贴图单元上
+            shader.SetInt((name + number).c_str(), i);
+
+            // 绑定贴图
+            glBindTexture(GL_TEXTURE_2D, _textures[i].id);
+        }
+
+        // 绘制网格
+        glBindVertexArray(VAO);
+        glDrawElements(GL_TRIANGLES, static_cast<unsigned int>(_indices.size()), GL_UNSIGNED_INT, 0);
+
+        glBindVertexArray(0);
+
+        // 将贴图激活设置为默认
+        glActiveTexture(GL_TEXTURE0);
 
     }
 

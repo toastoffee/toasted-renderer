@@ -63,6 +63,13 @@ build CMakeFiles/toasted_renderer.dir/glad/src/glad.c.o: C_COMPILER__toasted_ren
   OBJECT_DIR = CMakeFiles/toasted_renderer.dir
   OBJECT_FILE_DIR = CMakeFiles/toasted_renderer.dir/glad/src
 
+build CMakeFiles/toasted_renderer.dir/src/thirdParty/stb_image.cpp.o: CXX_COMPILER__toasted_renderer_unscanned_Debug /Users/toastoffee/Documents/CLionProjects/toasted-renderer/src/thirdParty/stb_image.cpp || cmake_object_order_depends_target_toasted_renderer
+  DEP_FILE = CMakeFiles/toasted_renderer.dir/src/thirdParty/stb_image.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/toastoffee/Documents/CLionProjects/toasted-renderer/src -I/Users/toastoffee/Documents/CLionProjects/toasted-renderer/glm -I/Users/toastoffee/Documents/CLionProjects/toasted-renderer/glad/include -I/opt/homebrew/Cellar/glfw/3.4/include -I/opt/homebrew/Cellar/assimp/5.3.1/include
+  OBJECT_DIR = CMakeFiles/toasted_renderer.dir
+  OBJECT_FILE_DIR = CMakeFiles/toasted_renderer.dir/src/thirdParty
+
 build CMakeFiles/toasted_renderer.dir/src/shader.cpp.o: CXX_COMPILER__toasted_renderer_unscanned_Debug /Users/toastoffee/Documents/CLionProjects/toasted-renderer/src/shader.cpp || cmake_object_order_depends_target_toasted_renderer
   DEP_FILE = CMakeFiles/toasted_renderer.dir/src/shader.cpp.o.d
   FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
@@ -98,6 +105,13 @@ build CMakeFiles/toasted_renderer.dir/src/render_window.cpp.o: CXX_COMPILER__toa
   OBJECT_DIR = CMakeFiles/toasted_renderer.dir
   OBJECT_FILE_DIR = CMakeFiles/toasted_renderer.dir/src
 
+build CMakeFiles/toasted_renderer.dir/src/components/model.cpp.o: CXX_COMPILER__toasted_renderer_unscanned_Debug /Users/toastoffee/Documents/CLionProjects/toasted-renderer/src/components/model.cpp || cmake_object_order_depends_target_toasted_renderer
+  DEP_FILE = CMakeFiles/toasted_renderer.dir/src/components/model.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/toastoffee/Documents/CLionProjects/toasted-renderer/src -I/Users/toastoffee/Documents/CLionProjects/toasted-renderer/glm -I/Users/toastoffee/Documents/CLionProjects/toasted-renderer/glad/include -I/opt/homebrew/Cellar/glfw/3.4/include -I/opt/homebrew/Cellar/assimp/5.3.1/include
+  OBJECT_DIR = CMakeFiles/toasted_renderer.dir
+  OBJECT_FILE_DIR = CMakeFiles/toasted_renderer.dir/src/components
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target toasted_renderer
@@ -106,7 +120,7 @@ build CMakeFiles/toasted_renderer.dir/src/render_window.cpp.o: CXX_COMPILER__toa
 #############################################
 # Link the executable toasted_renderer
 
-build toasted_renderer: CXX_EXECUTABLE_LINKER__toasted_renderer_Debug CMakeFiles/toasted_renderer.dir/main.cpp.o CMakeFiles/toasted_renderer.dir/glad/src/glad.c.o CMakeFiles/toasted_renderer.dir/src/shader.cpp.o CMakeFiles/toasted_renderer.dir/src/path_helper.cpp.o CMakeFiles/toasted_renderer.dir/src/camera.cpp.o CMakeFiles/toasted_renderer.dir/src/Input.cpp.o CMakeFiles/toasted_renderer.dir/src/render_window.cpp.o
+build toasted_renderer: CXX_EXECUTABLE_LINKER__toasted_renderer_Debug CMakeFiles/toasted_renderer.dir/main.cpp.o CMakeFiles/toasted_renderer.dir/glad/src/glad.c.o CMakeFiles/toasted_renderer.dir/src/thirdParty/stb_image.cpp.o CMakeFiles/toasted_renderer.dir/src/shader.cpp.o CMakeFiles/toasted_renderer.dir/src/path_helper.cpp.o CMakeFiles/toasted_renderer.dir/src/camera.cpp.o CMakeFiles/toasted_renderer.dir/src/Input.cpp.o CMakeFiles/toasted_renderer.dir/src/render_window.cpp.o CMakeFiles/toasted_renderer.dir/src/components/model.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/Cellar/glfw/3.4/lib -Wl,-rpath,/opt/homebrew/Cellar/assimp/5.3.1/lib  -lglfw  -lassimp
   LINK_PATH = -L/opt/homebrew/Cellar/glfw/3.4/lib   -L/opt/homebrew/Cellar/assimp/5.3.1/lib

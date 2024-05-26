@@ -24,6 +24,10 @@ link_directories(/opt/homebrew/Cellar/assimp/5.3.1/lib)
 add_executable( ${PROJECT_NAME}
         main.cpp
         glad/src/glad.c
+
+        src/thirdParty/stb_image.h
+        src/thirdParty/stb_image.cpp
+
         src/shader.cpp
         src/path_helper.cpp
         src/camera.cpp
@@ -34,6 +38,8 @@ add_executable( ${PROJECT_NAME}
         src/components/mesh.hpp
         src/components/material.hpp
         src/components/mesh_renderer.hpp
+        src/components/model.cpp
+        src/components/model.h
 )
 
 target_link_libraries(
