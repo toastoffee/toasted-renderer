@@ -33,7 +33,7 @@ add_executable( ${PROJECT_NAME}
         src/camera.cpp
         src/camera.h
         src/utils/singleton.h
-        src/Input.cpp
+        src/input_system.cpp
         src/render_window.cpp
         src/components/mesh.hpp
         src/components/material.hpp

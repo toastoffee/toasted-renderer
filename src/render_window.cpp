@@ -55,6 +55,9 @@ GLFWwindow *RenderWindow::InitWindow() {
 
     glfwMakeContextCurrent(window);                                                             // 将窗口的上下文设置为当前线程的主上下文
 
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);                    // 让GLFW捕获我们的鼠标
+
+
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))                                    // GLAD加载系统相关的OpenGL函数指针地址
     {
         std::cout << "ERROR::GLAD::INITIALIZATION_FAILED" << std::endl;                         // GLAD加载失败报错

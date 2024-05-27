@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file           : Input.cpp
+  * @file           : InputSystem.cpp
   * @author         : toastoffee
   * @brief          : None
   * @attention      : None
@@ -10,10 +10,15 @@
 
 
 
-#include "Input.h"
+#include "input_system.h"
 
-bool Input::GetKey(int glfw_key) const {
+void InputSystem::Init(GLFWwindow *window) {
+    _window = window;
+}
+
+bool InputSystem::GetKey(int glfw_key) const {
     return glfwGetKey(_window, glfw_key) == GLFW_PRESS;
 }
+
 
 

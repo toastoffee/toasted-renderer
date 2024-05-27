@@ -40,7 +40,7 @@ namespace glm
 
 	/// Builds a translation 4 * 4 matrix created from a vector of 3 components.
 	///
-	/// @param m Input matrix multiplied by this translation matrix.
+	/// @param m InputSystem matrix multiplied by this translation matrix.
 	/// @param v Coordinates of a translation vector.
 	///
 	/// @tparam T A floating-point scalar type
@@ -66,7 +66,7 @@ namespace glm
 
 	/// Builds a rotation 4 * 4 matrix created from an axis vector and an angle.
 	///
-	/// @param m Input matrix multiplied by this rotation matrix.
+	/// @param m InputSystem matrix multiplied by this rotation matrix.
 	/// @param angle Rotation angle expressed in radians.
 	/// @param axis Rotation axis, recommended to be normalized.
 	///
@@ -82,7 +82,7 @@ namespace glm
 
 	/// Builds a scale 4 * 4 matrix created from 3 scalars.
 	///
-	/// @param m Input matrix multiplied by this scale matrix.
+	/// @param m InputSystem matrix multiplied by this scale matrix.
 	/// @param v Ratio of scaling for each axis.
 	///
 	/// @tparam T A floating-point scalar type

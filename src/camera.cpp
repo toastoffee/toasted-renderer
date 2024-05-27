@@ -69,9 +69,46 @@ void Camera::ProcessMouseMovement(float xOffset, float yOffset, GLboolean constr
     xOffset *= _mouseSensitivity;
     yOffset *= _mouseSensitivity;
 
-    
+    _yaw += xOffset;
+    _pitch += yOffset;
+
+    // 确保俯仰角在范围内，以免屏幕翻转
+    if(constrainPitch){
+        if(_pitch > 89.0f){
+            _pitch = 89.0f;
+        }else if(_pitch < -89.0f){
+            _pitch = -89.0f;
+        }
+    }
+
+    updateCameraVectors();
 }
 
 void Camera::ProcessMouseScroll(float yOffset) {
+    _fov -= (float)yOffset;
+
+    // 将fov限制在一定范围
+    if(_fov < 1.0f){
+        _fov = 1.0f;
+    }else if(_fov > 45.0f){
+        _fov = 45.0f;
+    }
+
+}
+
+void Camera::Update(float deltaTime) {
+
+
+    if (InputSystem::Instance()->GetKey(GLFW_KEY_W))
+        ProcessKeyboard(FORWARD, deltaTime);
+
+    if (InputSystem::Instance()->GetKey(GLFW_KEY_S))
+        ProcessKeyboard(BACKWARD, deltaTime);
+
+    if (InputSystem::Instance()->GetKey(GLFW_KEY_A))
+        ProcessKeyboard(LEFT, deltaTime);
+
+    if (InputSystem::Instance()->GetKey(GLFW_KEY_D))
+        ProcessKeyboard(RIGHT, deltaTime);
 
 }

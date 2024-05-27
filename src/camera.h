@@ -17,6 +17,8 @@
 
 #include <glad/glad.h>
 
+#include <input_system.h>
+
 enum Camera_Movement
 {
     FORWARD,
@@ -71,6 +73,9 @@ public:
 
     // 处理滚轮输入
     void ProcessMouseScroll(float yOffset);
+
+    // 更新相机
+    void Update(float deltaTime);
 
 };
 
