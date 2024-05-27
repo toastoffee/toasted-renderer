@@ -99,8 +99,9 @@ void Camera::ProcessMouseScroll(float yOffset) {
 void Camera::Update(float deltaTime) {
 
 
-    if (InputSystem::Instance()->GetKey(GLFW_KEY_W))
+    if (InputSystem::Instance()->GetKey(GLFW_KEY_W)){
         ProcessKeyboard(FORWARD, deltaTime);
+    }
 
     if (InputSystem::Instance()->GetKey(GLFW_KEY_S))
         ProcessKeyboard(BACKWARD, deltaTime);

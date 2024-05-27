@@ -18,3 +18,14 @@
 2	508	1716791289457699939	CMakeFiles/toasted_renderer.dir/main.cpp.o	62c55871909161bc
 2	505	1716791587129483491	CMakeFiles/toasted_renderer.dir/main.cpp.o	62c55871909161bc
 506	548	1716791587174812265	toasted_renderer	f12db4971c5b155f
+3	476	1716805408114338959	CMakeFiles/toasted_renderer.dir/src/render_window.cpp.o	8c3612481373a84a
+3	480	1716805408116691957	CMakeFiles/toasted_renderer.dir/src/camera.cpp.o	93b9bf5881e49245
+2	556	1716805408195666202	CMakeFiles/toasted_renderer.dir/main.cpp.o	62c55871909161bc
+556	605	1716805408247211671	toasted_renderer	f12db4971c5b155f
+3	491	1716805776383050322	CMakeFiles/toasted_renderer.dir/src/camera.cpp.o	93b9bf5881e49245
+3	601	1716805776492929490	CMakeFiles/toasted_renderer.dir/main.cpp.o	62c55871909161bc
+601	650	1716805776544559133	toasted_renderer	f12db4971c5b155f
+2	406	1716806299370986616	CMakeFiles/toasted_renderer.dir/src/camera.cpp.o	93b9bf5881e49245
+3	428	1716806299391611549	CMakeFiles/toasted_renderer.dir/src/render_window.cpp.o	8c3612481373a84a
+2	523	1716806299487710657	CMakeFiles/toasted_renderer.dir/main.cpp.o	62c55871909161bc
+523	563	1716806299530237080	toasted_renderer	f12db4971c5b155f
