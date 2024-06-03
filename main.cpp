@@ -47,7 +47,6 @@ int main() {
     mainWindow.EnableDepthTest();
 
 
-
     Shader myShader(PathHelper::constructFilePath("shaders/texture.vert"),
                     PathHelper::constructFilePath("shaders/texture.frag"));
 
